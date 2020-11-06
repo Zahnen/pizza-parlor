@@ -1,3 +1,4 @@
+//Business Logic
 function Pizza (size, toppings) {
   this.size = size;
   this.toppings = [];
@@ -21,6 +22,8 @@ Pizza.prototype.calcPrice = function(size, toppings) {
   }
   return total
 }
+
+//UI Logic
 
 
 /*
