@@ -13,42 +13,53 @@
       <h1 class="display-4">Zahnen's Pizza</h1>
       <p>Please customize your pizza order below. Press submit to confirm the price of your order</p>
     </div>
-    <form id="order">
-      <div class="row">
-        <div class="col-4">
-          <h5>Please select your pizza size:</h5>
+    <form id="pizzaOrder">
+      <div class="form-row" id="orderScreen">
+        <div class="form-group col-4">
+          <h5>Select your pizza size:</h5>
           <select class="form-control" id="size">
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>
           </select>
-          <h5>Please select your crust:</h5>
-          <select class="form-control" id="size">
+          <h5>Select your crust:</h5>
+          <select class="form-control" id="crust">
             <option value="classic">Classic</option>
             <option value="thin">Thin</option>
             <option value="gluten free">Gluten Free</option>
           </select>
         </div>
-        <div class="col-4">
-          <h5>Please choose your toppings:</h5>
+        <div class="form-group col-4">
+          <h5>Choose your toppings:</h5>
           <div class="form-group">
             <input type="checkbox" name="topping" value="pepperoni">Pepperoni</br>
             <input type="checkbox" name="topping" value="olives">Olives</br>
             <input type="checkbox" name="topping" value="sausage">Sausage</br>
-            <input type="checkbox" name="mushrooms" value="olives">Mushrooms</br>
+            <input type="checkbox" name="topping" value="mushrooms">Mushrooms</br>
             <input type="checkbox" name="topping" value="arugula">Arugula</br>
             <input type="checkbox" name="topping" value="hot peppers">Hot Peppers</br>
             <input type="checkbox" name="topping" value="hot honey">Hot Honey</br>
           </div>
         </div>
-        <div class="col-4">
-          <h5>Special requests? Let us know below:</h5>
-          <input type="text">
+        <div class="form-group col-4">
           <h5>Good to go?</h5>
-          <button class="btn btn-outline-primary">Pizza time!</button>
+          <button type="submit" class="btn btn-outline-primary">Pizza time!</button>
         </div>
       </div>
     </form>
+  </div>
+  <div class="container" id="confirmation">
+    <h4>Thank you for your order! Your order details can be found below:</h1>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Your Order</h5>
+        <p class="card-text"><span id="finalPizza"></span></p>
+        <p class="card-text"><span id="finalToppings"></span></p>
+        <p class="card-text"><strong><span id="orderTotal"></span></strong></p>
+        <a href="#" class="card-link">Order Again</a>
+      </div>
+    </div>
+  </div>
   </div>
 </body>
 </html>

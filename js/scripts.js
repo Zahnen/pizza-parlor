@@ -33,7 +33,9 @@ $(document).ready(function() {
     let cost = finalPizza.addPrice();
     $("#confirmation").fadeIn();
     $("#orderScreen").slideUp();
-    $("#finalPizza").html("We'll be making you a " + size + " pizza. We'll be adding " + toppings.join(", ") + " to your " + crust + " crust pizza. If you've added a special request, it will be noted below. Please be aware that not all requests can be accommodated. Your total will be $" + cost +".00")
+    $("#finalPizza").html("We'll be making you a " + size + " pizza with " + crust + " crust. If you added any toppings, they'll be listed below:")
+    $("#finalToppings").html(toppings.join(" + "));
+    $("#orderTotal").html("Your total will be $" + cost +".00");
   });
 });
 
@@ -63,4 +65,19 @@ Expect: result.toEqual("18");
 Pizza.prototype.addToppings = function(toppings) {
   this.toppings.push(toppings)
 };
+
+//Cart Business Logic
+function Cart (){
+  this.pizzas = [];
+  this.pieNum = 0;
+}
+Cart.prototype.addPizza = function (pizza) {
+  pizza.pieNum = this.assignPieNum();
+  this.pizzas.push(pizza)
+}
+
+Cart.prototype.assignPieNum = function() {
+  this.pieNum += 1;
+  return this.pieNum
+}
 */
