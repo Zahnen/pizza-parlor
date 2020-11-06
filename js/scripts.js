@@ -4,10 +4,6 @@ function Pizza (size, toppings) {
   this.toppings = toppings;
 }
 
-Pizza.prototype.addToppings = function(toppings) {
-  this.toppings.push(toppings)
-};
-
 Pizza.prototype.addPrice = function() {
   let total = 10;
   if (this.size === "medium") {
@@ -18,7 +14,7 @@ Pizza.prototype.addPrice = function() {
     total += 0;
   }
   for (let i=0; i < this.toppings.length; i++) {
-    total +=1.5;
+    total +=1;
   }
   return total;
 };
@@ -33,8 +29,11 @@ $(document).ready(function() {
     $("input:checkbox[name=topping]:checked").each(function() {
       toppings.push($(this).val());
     });
+    let finalPizza = new Pizza (size, toppings);
+    let cost = finalPizza.addPrice();
     $("#confirmation").fadeIn();
-    $("#finalPizza").html("We'll be making you a " + size + " pizza. We'll be adding " + toppings.join(", ") + " to your " + crust + " crust pizza. If you've added a special request, it will be noted below. Please be aware that not all requests can be accommodated." )
+    $("#orderScreen").slideUp();
+    $("#finalPizza").html("We'll be making you a " + size + " pizza. We'll be adding " + toppings.join(", ") + " to your " + crust + " crust pizza. If you've added a special request, it will be noted below. Please be aware that not all requests can be accommodated. Your total will be $" + cost +".00")
   });
 });
 
@@ -60,4 +59,8 @@ Code: let pizza1 = new Pizza("small");
 Code: pizza1.addToppings("cheese", "olives");
 Code: let result = pizza1.calcPrice();
 Expect: result.toEqual("18");
+
+Pizza.prototype.addToppings = function(toppings) {
+  this.toppings.push(toppings)
+};
 */
