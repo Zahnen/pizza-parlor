@@ -13,6 +13,42 @@
       <h1 class="display-4">Zahnen's Pizza</h1>
       <p>Please customize your pizza order below. Press submit to confirm the price of your order</p>
     </div>
+    <form id="order">
+      <div class="row">
+        <div class="col-4">
+          <h5>Please select your pizza size:</h5>
+          <select class="form-control" id="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <h5>Please select your crust:</h5>
+          <select class="form-control" id="size">
+            <option value="classic">Classic</option>
+            <option value="thin">Thin</option>
+            <option value="gluten free">Gluten Free</option>
+          </select>
+        </div>
+        <div class="col-4">
+          <h5>Please choose your toppings:</h5>
+          <div class="form-group">
+            <input type="checkbox" name="topping" value="pepperoni">Pepperoni</br>
+            <input type="checkbox" name="topping" value="olives">Olives</br>
+            <input type="checkbox" name="topping" value="sausage">Sausage</br>
+            <input type="checkbox" name="mushrooms" value="olives">Mushrooms</br>
+            <input type="checkbox" name="topping" value="arugula">Arugula</br>
+            <input type="checkbox" name="topping" value="hot peppers">Hot Peppers</br>
+            <input type="checkbox" name="topping" value="hot honey">Hot Honey</br>
+          </div>
+        </div>
+        <div class="col-4">
+          <h5>Special requests? Let us know below:</h5>
+          <input type="text">
+          <h5>Good to go?</h5>
+          <button class="btn btn-outline-primary">Pizza time!</button>
+        </div>
+      </div>
+    </form>
   </div>
 </body>
 </html>
