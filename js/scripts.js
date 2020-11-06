@@ -1,7 +1,7 @@
 //Business Logic
 function Pizza (size, toppings) {
   this.size = size;
-  this.toppings = [];
+  this.toppings = toppings;
 }
 
 Pizza.prototype.addToppings = function(toppings) {
@@ -27,9 +27,14 @@ Pizza.prototype.addPrice = function() {
 $(document).ready(function() {
   $("form#pizzaOrder").submit(function(event) {
     event.preventDefault();
-    let size = $("input#size").val();
+    let size = $("select#size").val();
+    let crust = $("select#crust").val();
+    let toppings = [];
+    $("input:checkbox[name=topping]:checked").each(function() {
+      toppings.push($(this).val());
+    });
     $("#confirmation").fadeIn();
-    $("#finalPizza").html("We'll be making you a " + size + "pizza.")
+    $("#finalPizza").html("We'll be making you a " + size + " pizza. We'll be adding " + toppings.join(", ") + " to your " + crust + " crust pizza. If you've added a special request, it will be noted below. Please be aware that not all requests can be accommodated." )
   });
 });
 
