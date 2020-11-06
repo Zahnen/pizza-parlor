@@ -4,12 +4,12 @@ function Pizza (size, toppings) {
   this.toppings = [];
 }
 
-Pizza.prototype.addToppings = function(toppings) {
-  (this.toppings).push(toppings)
-}
+Pizza.prototype.addToppings = function(toppings) {
+  this.toppings.push(toppings)
+};
 
-Pizza.prototype.calcPrice = function(size, toppings) {
-  let total = 10
+Pizza.prototype.addPrice = function() {
+  let total = 10;
   if (this.size === "medium") {
     total += 4;
   } else if (this.size === "large") {
@@ -20,11 +20,18 @@ Pizza.prototype.calcPrice = function(size, toppings) {
   for (let i=0; i < this.toppings.length; i++) {
     total +=1.5;
   }
-  return total
-}
+  return total;
+};
 
 //UI Logic
-
+$(document).ready(function() {
+  $("form#pizzaOrder").submit(function(event) {
+    event.preventDefault();
+    let size = $("input#size").val();
+    $("#confirmation").fadeIn();
+    $("#finalPizza").html("We'll be making you a " + size + "pizza.")
+  });
+});
 
 /*
 Describe: Pizza ()
