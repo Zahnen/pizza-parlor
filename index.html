@@ -11,7 +11,7 @@
   <div class="container">
     <div class="jumbotron">
       <h1 class="display-4">Zahnen's Pizza</h1>
-      <p>Please customize your pizza order below. Press submit to confirm the price of your order</p>
+      <p>We take pride in making some of the best pizza in the world. Please place your pizza order below and press submit to confirm your order and amount due.</p>
     </div>
     <form id="pizzaOrder">
       <div class="form-row" id="orderScreen">
@@ -32,31 +32,34 @@
         <div class="form-group col-4">
           <h5>Choose your toppings:</h5>
           <div class="form-group">
-            <input type="checkbox" name="topping" value="pepperoni">Pepperoni</br>
-            <input type="checkbox" name="topping" value="olives">Olives</br>
-            <input type="checkbox" name="topping" value="sausage">Sausage</br>
-            <input type="checkbox" name="topping" value="mushrooms">Mushrooms</br>
-            <input type="checkbox" name="topping" value="arugula">Arugula</br>
-            <input type="checkbox" name="topping" value="hot peppers">Hot Peppers</br>
-            <input type="checkbox" name="topping" value="hot honey">Hot Honey</br>
+            <input type="checkbox" name="topping" value="Pepperoni"> Pepperoni</br>
+            <input type="checkbox" name="topping" value="Olives"> Olives</br>
+            <input type="checkbox" name="topping" value="Sausage"> Sausage</br>
+            <input type="checkbox" name="topping" value="Mushrooms"> Mushrooms</br>
+            <input type="checkbox" name="topping" value="Arugula"> Arugula</br>
+            <input type="checkbox" name="topping" value="Hot Peppers"> Hot Peppers</br>
+            <input type="checkbox" name="topping" value="Hot Honey"> Hot Honey</br>
           </div>
         </div>
         <div class="form-group col-4">
           <h5>Good to go?</h5>
-          <button type="submit" class="btn btn-outline-primary">Pizza time!</button>
+          <button type="submit" class="btn btn-outline-primary">Pizza time!</button></br>
+          <img src="img/pizza.png" alt="a happy slice of pizza">
         </div>
       </div>
     </form>
   </div>
   <div class="container" id="confirmation">
-    <h4>Thank you for your order! Your order details can be found below:</h1>
+    <h4>Thank you for your order! Your order details can be found below:</h4>
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">Your Order</h5>
         <p class="card-text"><span id="finalPizza"></span></p>
         <p class="card-text"><span id="finalToppings"></span></p>
         <p class="card-text"><strong><span id="orderTotal"></span></strong></p>
-        <a href="#" class="card-link">Order Again</a>
+        <form id="orderAgain">
+        <button type="submit" class="btn btn-outline-primary">Order Again</button>
+        </form>
       </div>
     </div>
   </div>
