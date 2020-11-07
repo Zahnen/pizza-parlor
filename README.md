@@ -89,5 +89,7 @@ _This webpage required use of the following programs/languages/libraries to crea
 
 *Licensed under MIT*
 
+*Vector icons provided via Icons8's library, which can be found at https://icons8.com/*
+
 
 Copyright (c) 2020 **_Zahnen Garner_**

@@ -1,0 +1,19 @@
+body, .jumbotron {
+  background-color: #e9c46a;
+}
+select, button, .rowImage {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#confirmation {
+  display: none;
+  text-align: center;
+}
+.card, .card-body {
+  margin: auto;
+}
+.form-group {
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
