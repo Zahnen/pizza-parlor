@@ -37,6 +37,10 @@ $(document).ready(function() {
     $("#finalToppings").html(toppings.join(" + "));
     $("#orderTotal").html("Your total will be $" + cost +".00");
   });
+  $("form#orderAgain").submit(function(event) {
+    event.preventDefault();
+    location.reload();
+  });
 });
 
 /*
